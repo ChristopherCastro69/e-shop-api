@@ -103,6 +103,9 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.dll
+.pdb
+.cache
 
 # Chutzpah Test files
 _Chutzpah*
@@ -504,3 +507,19 @@ Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
 Core/obj/Debug/net8.0/Core.AssemblyInfoInputs.cache
 Core/obj/Debug/net8.0/Core.csproj.FileListAbsolute.txt
 Core/bin/Debug/net8.0/Core.dll
+Core/obj/Debug/net8.0/Core.AssemblyInfoInputs.cache
+Infrastructure/Infrastructure.csproj
+Infrastructure/Infrastructure.csproj
+
+# Ignore DLL and PDB files
+*.dll
+*.pdb
+
+
+
+# Exclude bin/ and obj/ directories
+bin/
+obj/
+
+# Ignore cache files
+*.cache
