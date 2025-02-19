@@ -70,6 +70,11 @@ public class SpecificationEvaluator<T> where T : BaseEntity
             selectQuery = selectQuery?.Distinct();
         }
 
+        if(spec.isPagingEnabled)
+        {
+            selectQuery = selectQuery?.Skip(spec.Skip).Take(spec.Take);
+
+        }
         // Return the select query or cast the original query to TResult
         return selectQuery ?? query.Cast<TResult>();
     }
